@@ -46,10 +46,6 @@ class HomePage extends React.Component {
 
 		return (
 			<div className={style.container}>
-				<Navigator
-					items={[{text: "学术关系展示", href: "", id: ""}, {text: "学术资源搜索", href: "", id: ""}, {text: "目录检索", href: "", id: ""}]}
-					defaultChosenIndex={1}
-				></Navigator>
 				<SearchBar></SearchBar>
 				<div className={style.bodyContainer}>
 					<div className={style.menuContainer}>

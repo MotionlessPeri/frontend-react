@@ -1,0 +1,285 @@
+*{
+	font-family: Microsoft Tai Le;
+}
+html{
+    font-size: 80px;
+}
+a{
+	font-size: 0.32rem;
+	color: #3b7ca0;
+}
+hr{
+
+	background-color: #c9c9c9;
+	height: 1px;
+	width: 100%;
+	border:none;
+}
+.messageBoard{
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;
+-webkit-flex-direction: column;
+-moz-flex-direction: column;
+-ms-flex-direction: column;
+-o-flex-direction: column;
+flex-direction: column;
+padding-top: 0.75rem;
+padding-left: 1.08rem;
+background-color: #f2f2f2;
+}
+.messageBoard-sec{
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;
+-webkit-flex-direction: row;
+-moz-flex-direction: row;
+-ms-flex-direction: row;
+-o-flex-direction: row;
+flex-direction: row;
+}
+.messageBoard-mainContent{
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: flex-start;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+	/*width: 11.9rem;*/
+
+}
+.messageBoard-mainContent-head{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width: 10.82rem;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -ms-align-items:stretch;
+}
+.messageBoard-mainContent-headInfo{
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;
+-webkit-flex-direction: column;
+-moz-flex-direction: column;
+-ms-flex-direction: column;
+-o-flex-direction: column;
+flex-direction: column;
+font-size: 0.31rem;
+width: 8.21rem;
+}
+.messageBoard-mainContent-headInfo div{
+	padding: 0px;
+}
+.messageBoard-mainContent-headText{
+	align-items: center;
+	display: -webkit-flex; 
+	display: flex; 
+	-webkit-align-items: center; 
+	align-items: center; 
+	-webkit-justify-content: center;
+	 justify-content: center; 
+	 font-size: 0.21rem;
+	 width: 2.62rem; 
+}
+
+
+.messageBoard-mainContent-reply{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width:10.82rem;
+	font-size: 0.32rem;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: flex-start;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+		
+}
+.messageBoard-mainContent-replyTrigger{
+ height: 0.94rem;
+ padding-left: 0.14rem;
+ display: -webkit-flex;
+ display: -moz-flex;
+ display: -ms-flex;
+ display: -o-flex;
+ display: flex;
+-webkit-flex-direction: column;
+-moz-flex-direction: column;
+-ms-flex-direction: column;
+-o-flex-direction: column;
+flex-direction: column;
+
+}
+.replyTrigger-blank{
+flex-grow: 1;
+
+}
+.messageBoard-mainContent-replyBox{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	display: none;
+
+}
+
+.messageBoard-mainContent-replyBox-submit{
+   border-color: #c9c9c9;
+   height:1.75rem;
+   width: 0.77rem;
+   display: -webkit-flex;
+   display: -moz-flex;
+   display: -ms-flex;
+   display: -o-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   -moz-flex-direction: column;
+   -ms-flex-direction: column;
+   -o-flex-direction: column;
+   flex-direction: column;
+   display: none;
+   margin-left: 0.14rem;
+   }
+.messageBoard-mainContent-replyBox-blankspace{
+	flex-grow: 1;
+	
+}
+
+
+.messageBoard-mainContent-replyBox-input{
+   width: 10.06rem;
+   display: none;
+   height: 1.9rem;
+  
+}
+.messageBoard-mainContent-replyBox-input textarea{
+	width: 100%;
+}
+.messageBoard-mainContent-replyBox-notification{
+	
+    position: relative;
+    width: 40px;
+    height: 40px;
+	bottom: -35%;   
+    left:-50%;
+   
+}
+
+
+.messageBoard-mainContent-body{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 10.82rem;
+	height: 1.69rem;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	font-size:  0.3rem;	
+	border-bottom: solid;
+	border-bottom-color: #c9c9c9;
+	display: none;
+
+}
+
+
+.messageBoard-mainContent-body-blank{
+margin-left: 0.81rem;
+}
+.messageBoard-mainContent-body-content
+{	
+	width: 100%
+}
+.messageBoard-mainContent-body-item{
+	 padding-top: 0.25rem;
+}
+.messageBoard-sortButton{
+	display: -webkit-flex; 
+	display: flex; 
+	-webkit-align-items: center; 
+	align-items: center; 
+	-webkit-justify-content: center;
+	justify-content: center; 
+	width: 3.47rem;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	 
+
+}
+
+.messageBoard-sortButton-innerBox{	
+	flex-grow: 1;
+	padding-top: 0px;
+
+}
+.messageBoard-sortButton-innerBox div{
+width:2.72rem;
+height: 0.74rem;
+background-color: white;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;
+-webkit-flex-direction: column;
+-moz-flex-direction: column;
+-ms-flex-direction: column;
+-o-flex-direction: column;
+flex-direction: column;
+justify-content:center; 
+align-items:center;
+margin-top: 1px;
+}
+.a-button{
+	color: black;
+	font-size: 0.21rem;
+
+}
+.a-button:hover{
+color: #f17e2e;
+}

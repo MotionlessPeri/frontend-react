@@ -2,7 +2,7 @@ import React from 'react';
 import {Router, Route, Link, browserHistory, IndexRoute} from 'react-router';
 import style from './Navigator.module.css';
 /*
-@props [{String text, String href, String id}] items 导航栏中每一项的值。text为导航栏中显示的内容；href为链接，现阶段刻意留空；id为导航栏该项所对应的组件的唯一标识符，一般用于回调
+@props Array items [{String text, String href, String id}] items 导航栏中每一项的值。text为导航栏中显示的内容；href为链接，现阶段刻意留空；id为导航栏该项所对应的组件的唯一标识符，一般用于回调
 @props Number defaultChosenIndex 默认选中的项
 @props Function itemOnClickCallBack 导航栏中的项被选中所调用的回调
  */
@@ -23,7 +23,7 @@ class Navigator extends React.Component {
 
 	itemOnClickHandler(e) {
 		let i = parseInt(e.target.getAttribute("index"));
-		this.setState({chosenIndex: i}, this.props.itemOnClickCallBack.bind(null, this.props.items[i].id));
+		this.setState({chosenIndex: i}, this.props.itemOnClickCallBack.bind(null, this.props.items[i]));
 	}
 
 	render() {

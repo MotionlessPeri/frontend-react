@@ -1,0 +1,96 @@
+.container{
+	min-height: 9.110rem;
+	background-color: #f2f2f2;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+}
+.searchContainer{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: space-between;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	width: 11.23rem;
+	height: 1.25rem;
+	margin-top: 0.77rem;
+	-ms-align-self: center;
+	align-self: center;
+}
+.searchBox{
+	height: 0.75rem;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: flex-start;
+	-ms-align-items: center;
+	align-items: center;
+	background-color: white;
+	border-radius: 0.1rem;
+}
+.dropdownContainer{
+	width: 2.45rem;
+	height: 0.75rem;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+/*	border-right: 0.01rem solid #c9c9c9;*/
+}
+.searchInput{
+	border: 0;
+	outline: none;
+	color: #c9c9c9;
+	flex-grow: 1;
+	font-size: 0.3rem;
+}
+.searchIcon{
+	width: 0.6rem;
+	height: 0.6rem;
+	background-image: url("../common/img/search.png");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	margin-right: 0.1rem;
+}
+.hideMark{
+	background-image: url('../common/img/triangle.png');
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-position: center;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-left: 2.19rem;
+}

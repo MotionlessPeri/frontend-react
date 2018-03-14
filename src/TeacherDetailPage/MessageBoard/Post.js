@@ -9,11 +9,25 @@ import {message} from 'antd';
 @state Boolean createNewSubject 发帖按钮是否被点击
  */
 const subjectForTest = {
-		topic: "lalalala",
-		content: "im lalalalallalalalala",
-		reply: ["aaaaaaaa", "bbb", "ccc"]
-		
-	}
+	subjectID: "",
+	timestamp: "1456790400000",
+	topic: "lalalala",
+	content: "im lalalalallalalalala",
+	reply: [
+		{
+			timestamp: "1514808000000",
+			content: "aaaaaaaa"
+		},
+		{
+			timestamp: "1519905600000",
+			content: "bbb"
+		},
+		{
+			timestamp: "1519862400000",
+			content: "ccc"
+		},
+	]
+}
 class Post extends React.Component {
 	static defaultProps = {
 		// subject: {topic: "", content: "", reply: []}
@@ -80,7 +94,7 @@ class Post extends React.Component {
 						type="text" 
 						className={style.reply}
 						readOnly="readonly"
-					>{r}</p>
+					>{r.content}</p>
 				</li>
 			);
 			replyList.push(reply);

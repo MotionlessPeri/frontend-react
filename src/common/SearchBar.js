@@ -19,11 +19,12 @@ class SearchBar extends React.Component {
 		
 		this.search = this.search.bind(this);
 
-		this.input = {};// input搜索框
+		this.searchInput = {};// input搜索框
 	}
 	
-	search() {
-		console.log("search", this.input.value, this.state.searchType);
+	search(value) {
+		console.log("search", this.searchInput.value, this.state.searchType);
+		//TODO: 调用搜索接口
 	}
 
 	render() {
@@ -42,7 +43,7 @@ class SearchBar extends React.Component {
 				</div>
 				<div className={style.searchContainer}>
 					<input 
-						ref={input => {this.input = input}}
+						ref={input => {this.searchInput = input}}
 						className={style.searchInput} 
 						type="text" 
 						name="" 

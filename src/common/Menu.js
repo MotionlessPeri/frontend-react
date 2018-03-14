@@ -16,7 +16,7 @@ import menuStyle from './Menu.module.css';
 
 class MiniMenu extends React.Component {
 	static defaultProps = {
-		items: [{text: "lalala1", href:""}, {text: "lalala2", href:""}, {text: "lalala3", href:""}, {text: "lalala4", href:""}],
+		items: [{text: "lalala1", href:"", id: ""}, {text: "lalala2", href:"", id: ""}, {text: "lalala3", href:"", id: ""}, {text: "lalala4", href:"", id: ""}],
 		textOnClickCallBack: () => {},
 		defaultChosenIndex: 0,
 		size: "1rem",
@@ -114,20 +114,21 @@ class Menu extends React.Component {
 		this.textOnClickHanler = this.textOnClickHanler.bind(this);
 		this.render = this.render.bind(this);
 
+		this.chosenItem = {};
+		this.marker = {};
+		
 	}
+
 	componentDidMount() {
 		if(this.isMarkerInitial === false) {
-			let chosenItem = document.getElementsByClassName(menuStyle.item)[this.props.defaultChosenIndex];
-			document.getElementsByClassName(menuStyle.marker)[0].style.top = chosenItem.offsetTop + "px";
-			chosenItem.style.color = "#fc8122";
+			this.marker.dom.style.top = this.chosenItem.offsetTop + "px";
 			this.isMarkerInitial = true;
-			//判断marker是否初始化，如果没初始化，那么将被选中的menu项的offsetTop赋给marker的style.top，让marker与被选中的menu项对齐
 		}
 	}
 	textOnClickHanler(e) {
 		let i = parseInt(e.target.getAttribute("index"));
 		let animationObject = {top: e.target.offsetParent.offsetTop}; 
-		this.setState({chosenIndex: i, animationObject:animationObject}, this.props.textOnClickCallBack.bind(null, this.props.items[i].id));
+		this.setState({chosenIndex: i, animationObject:animationObject}, this.props.textOnClickCallBack.bind(null, this.props.items[i]));
 	}
 
 
@@ -141,6 +142,11 @@ class Menu extends React.Component {
 					key={s} 
 					className={menuStyle.item}
 					style={{color: this.state.chosenIndex === i?"#fc8122":"black"}}
+					ref = {(li => {
+						if(this.state.chosenIndex === i) {
+							this.chosenItem = li;
+						}
+					}).bind(this)}
 				>
 					<div className={menuStyle.text} onClick={this.textOnClickHanler} index={i}>{s}</div>
 				</li>
@@ -157,7 +163,7 @@ class Menu extends React.Component {
 				</ul>
 				<div className={menuStyle.shapeContainer}>
 					<div className={menuStyle.line}>
-						<TweenOne animation={this.state.animationObject} className={menuStyle.marker}></TweenOne>			
+						<TweenOne ref={(marker => this.marker = marker).bind(this)} animation={this.state.animationObject} className={menuStyle.marker}></TweenOne>			
 					</div>
 					<div className={menuStyle.triangle} onClick={() => { window.scrollTo(0, 0)}}>
 					</div>

@@ -22,7 +22,10 @@ class TeacherDetailPage extends React.Component {
 
 	render() {
 		return (
-			<div className={style.container}>
+			<div 
+				className={style.container}
+				style={{height: window.innerHeight + "px"}}
+			>
 				<Navigator
 					items={[
 						{
