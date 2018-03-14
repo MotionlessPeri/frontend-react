@@ -1,0 +1,94 @@
+.container{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: flex-start;
+	-ms-align-items: center;
+	align-items: center;
+	width: 19.2rem;
+	height: 2.06rem;
+	background-color: #f2f2f2;
+}
+.menuContainer{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: flex-start;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	-ms-align-self: stretch;
+	align-self: stretch;
+	margin: 0.22rem 0 0 1.67rem;
+
+}
+.searchContainer{
+	width: 9.05rem;
+	height: 0.77rem;
+	border-radius: 0.1rem;
+	background-color: white;
+	margin-left: 0.82rem;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+.searchInput{
+	outline: none;
+	border: 0;
+	font-size: 0.3rem;
+	color: #c9c9c9;
+	width: 8.37rem;
+}
+.searchIcon{
+	width: 0.6rem;
+	height: 0.6rem;
+	background-image: url("./img/search.png");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	margin-right: 0.1rem;
+}
+.logo{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	-ms-align-self: stretch;
+	align-self: stretch;
+	width: 2.87rem;
+	height: 2.04rem;
+	margin-left: 1.26rem;
+}

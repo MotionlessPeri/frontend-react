@@ -1,0 +1,128 @@
+p{
+	margin: 0;
+}
+textarea{
+	border: 0;
+	outline: none;
+	resize: none;
+}
+.container{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: flex-start;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	width: 10.77rem;
+}
+.subject{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: flex-start;
+	-ms-align-items: stretch;
+	align-items: stretch;
+}
+.topic{
+	font-weight: bold;
+	font-size: 0.3rem;
+/*	border: none;*/
+	outline: none;
+}
+.holder{
+
+}
+.content{
+	font-size: 0.3rem;
+/*	border: none;*/
+	word-break: break-all; 
+	word-wrap: break-word;
+}
+.replyButton{
+	font-size: 0.3rem;
+	color: #387a9f;
+}
+.replyContainer{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: flex-start;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+}
+.replyItem{
+	position: relative;
+	width: 9.98rem;
+/*	height: 1.26rem;*/
+	margin: 0.23rem 0;
+	font-size: 0.3rem;
+	min-height: 0.6rem;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: flex-start;
+	-ms-align-items: stretch;
+	align-items: stretch;
+
+	border-left: 0.03rem solid #c9c9c9;
+}
+.submitReplyButton{
+	position: absolute;
+	top: 0.3rem;
+	left: -0.7rem;
+	font-size: 0.3rem;
+	color: #387a9f;
+/*	transform: translate(-0.78rem, -0.4rem);*/
+}
+.reply{
+/*	border: none;*/
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	font-size: 0.3rem;
+	word-break: break-all; 
+	word-wrap: break-word;
+}
+.replyHeight{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	font-size: 0.3rem;
+	min-height: 0.6rem;
+	word-break: break-all; 
+	word-wrap: break-word;
+	position: absolute;
+	visibility: hidden;
+}

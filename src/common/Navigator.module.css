@@ -1,0 +1,26 @@
+.container{
+	margin: 0 0.49rem;
+	height: 0.86rem;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.item{
+	font-size: 0.3rem;
+}
+
+.itemActive{
+	font-size: 0.3rem;
+	color: #fc8122;
+}

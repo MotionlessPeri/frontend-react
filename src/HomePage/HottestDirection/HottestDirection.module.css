@@ -1,0 +1,29 @@
+.container{
+	width: 13.42rem;
+	height: 5.61rem;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: flex-start;
+	-ms-align-items: stretch;
+	align-items: stretch;
+}
+.graph{
+	width: 4.11rem;
+
+}
+.chart{
+	width: 4.11rem;
+	margin-left: 1.06rem;
+}
+.info{
+	width: 3.70rem;
+	margin-left: 0.49rem;
+}
