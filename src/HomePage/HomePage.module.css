@@ -37,5 +37,11 @@
 	display: flex;
 }
 .showContainer{
+	width: 14.47rem;
 	margin: 0.4rem 0 0 0.93rem;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 }

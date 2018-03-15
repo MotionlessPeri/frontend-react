@@ -11,9 +11,10 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	-ms-align-items: stretch;
-	align-items: stretch;
+	align-items: stretch;	
+	flex-grow: 1;
 }
-.briefContainer{
+.briefItemsContainer{
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -24,13 +25,16 @@
 	-ms-flex-direction: row;
 	-o-flex-direction: row;
 	flex-direction: row;
-	justify-content: space-between;
-	-ms-align-items: flex-start;
-	align-items: flex-start;
+	justify-content: space-around;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
 	flex-wrap: wrap;
+	flex-grow: 1;
 	align-content: space-between;
-	width: 13.21rem;
-	height: 5.61rem;
 }
 .pageContainer{
 	display: -webkit-flex;

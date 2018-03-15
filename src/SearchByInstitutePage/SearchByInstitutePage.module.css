@@ -38,7 +38,7 @@
 	display: flex;
 	margin-left: 0.44rem;
 }
-.bodyRightContainer{
+.briefBoardContainer{
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -54,12 +54,14 @@
 	align-items: stretch;
 	margin-left: 1.1rem;
 	margin-top: 0.5rem;
+	width: 13rem;
 }
 .title{
 	font-size: 0.5rem;
 	font-weight: bold;
+	margin-bottom: 0.5rem;
 }
-.briefItemsContainer{
+/*.briefItemsContainer{
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -71,7 +73,6 @@
 	-o-flex-direction: row;
 	flex-direction: row;
 	justify-content: space-between;
-	-ms-align-items: flex-start;
 	align-items: flex-start;
 	flex-wrap: wrap;
 	align-content: space-between;
@@ -93,4 +94,4 @@
 	-ms-align-items: center;
 	align-items: center;
 	margin-top: 0.5rem;
-}
+}*/

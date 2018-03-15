@@ -32,13 +32,13 @@ class Navigator extends React.Component {
 			let s = this.props.items[i].text;
 			let u = this.props.items[i].href;
 			let item = (
-				<li 
+				<Link 
+					to={u}
 					className={style.item}
 					index={i}
-					onClick={this.itemOnClickHandler}
 					key={i}
-					style={{color: this.state.chosenIndex === i?"#fc8122":"black"}}
-				>{s}</li>
+					activeClassName={style.itemActive}
+				>{s}</Link>
 			);
 			itemList.push(item);
 		}

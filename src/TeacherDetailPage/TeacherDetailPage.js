@@ -13,11 +13,11 @@ class TeacherDetailPage extends React.Component {
 
 	constructor(props) {
 		super(props);
-
+		console.log("TeacherDetailPage", "constructor", this.props.params);
 		this.state ={
 			type: "BASIC",
 		}
-	// TODO 路由或props传参
+	// TODO 路由或props传参 接收teacherID
 	}
 
 	render() {

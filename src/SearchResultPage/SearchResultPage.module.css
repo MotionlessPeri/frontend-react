@@ -1,5 +1,20 @@
-
 .container{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: flex-start;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	width: 19.2rem;
+}
+.bodyContainer{
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -20,18 +35,16 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	-webkit-flex-direction: row;
-	-moz-flex-direction: row;
-	-ms-flex-direction: row;
-	-o-flex-direction: row;
-	flex-direction: row;
-	justify-content: space-between;
-	-ms-align-items: flex-start;
-	align-items: flex-start;
-	flex-wrap: wrap;
-	align-content: space-between;
-	width: 13.21rem;
-	height: 5.61rem;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: flex-start;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	-ms-align-self: center;
+	align-self: center;
 }
 .pageContainer{
 	display: -webkit-flex;

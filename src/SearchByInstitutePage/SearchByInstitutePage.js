@@ -3,6 +3,7 @@ import style from './SearchByInstitutePage.module.css';
 import {TeacherBrief} from '../common/TeacherBrief';
 import {Menu} from '../common/Menu';
 import {Navigator} from '../common/Navigator';
+import {TeacherBriefBoard} from '../common/TeacherBriefBoard';
 import {Pagination} from 'antd';
 
 const instituteForTest = {
@@ -89,8 +90,8 @@ class SearchByInstitutePage extends React.Component {
 		this.state = {
 			instituteName: [],
 			teacherBasicInfo: [],
-			chosenInstitute: {name: "", instituteID: ""},
-			currentPage: 1,
+			chosenInstitute: {text: "", instituteID: ""},
+			currentPage: 1
 		};
 		
 		this.getTeacherBasicInfoByInstitute = this.getTeacherBasicInfoByInstitute.bind(this);
@@ -108,7 +109,7 @@ class SearchByInstitutePage extends React.Component {
 	该方法从后台得到学院名的数据 并将第一个设置成被选中的学院 该方法必须在组件实例化之前调用 故不能使用setState
 	 */
 	getInstitute() {
-		//TODO: 从后台取得数据
+		//TODO: 从后台取得数据 该方法必须同步
 		//
 		let a = instituteForTest;
 		this.state.instituteName = a.items;
@@ -126,10 +127,11 @@ class SearchByInstitutePage extends React.Component {
 		console.log("1", institute);
 		if(!this.initial) { //在组件实例化之前必须调用一次该方法 此时不能使用setState 在之后调用该方法必须使用setState 故用该参数控制
 			console.log("2", institute);
-			this.setState({teascherBasicInfo: a.items, chosenInstitute: institute});
+			this.setState({teacherBasicInfo: a.items, chosenInstitute: institute});
 			console.log("3", institute);
 		}
 		else {
+			//TODO:从后台获取数据 在这里必须同步
 			console.log("4", institute);
 			this.state.teacherBasicInfo = a.items;
 			this.initial = false;
@@ -164,24 +166,23 @@ class SearchByInstitutePage extends React.Component {
 			<div className={style.container}>
 				<Navigator
 					items={[
-							{
-								text: "学术关系展示",
-								href: "",
-								id: ""
-							},
-							{
-								text: "学术资源搜索",
-								href: "",
-								id: ""
-							},
-							{
-								text: "目录索引",
-								href: "",
-								id: ""
-							}
-						]}
+						{
+							text: "学术关系展示",
+							href: "/ConnectionPage",
+							id: ""
+						},
+						{
+							text: "学术资源搜索",
+							href: "/HomePage",
+							id: ""
+						},
+						{
+							text: "目录索引",
+							href: "/SearchByInstitutePage",
+							id: ""
+						}
+					]}
 					defaultChosenIndex={2}
-					itemOnClickCallBack={() => {}}
 				></Navigator>
 				<div className={style.bodyContainer}>
 					<div className={style.menuContainer}>
@@ -191,22 +192,14 @@ class SearchByInstitutePage extends React.Component {
 							defaultChosenIndex={0}
 						></Menu>
 					</div>
-					<div className={style.bodyRightContainer}>
+					<div className={style.briefBoardContainer}>
 						<div className={style.title}>{this.state.chosenInstitute.text}</div>
-						<div className={style.briefItemsContainer}>
-							{briefItems}
-						</div>
-						<div className={style.pageContainer}>
-							<Pagination
-								current={this.state.currentPage}
-								defaltCurrent={1}
-								pageSize={6}
-								total={this.state.teacherBasicInfo.length}
-								onChange={((page) => {
-									this.setState({currentPage: page});
-								}).bind(this)}
-							></Pagination>
-						</div>
+						<TeacherBriefBoard
+							width="6rem"
+							pageSize={4}
+							defaultCurrentPage={1}
+							type="PURE"
+						></TeacherBriefBoard>
 					</div>
 				</div>
 			</div>

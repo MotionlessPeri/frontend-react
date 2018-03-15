@@ -2,29 +2,37 @@ import React from 'react';
 import {MiniMenu} from './Menu';
 import style from './SearchBar.module.css';
 /*
+@props String defaultInputValue 搜索框中默认输入的值
+@props Number defaultType 搜索框默认选择的类型
 @state Number searchType 搜索类型
  */
 class SearchBar extends React.Component {
 
 	static defaultProps = {
-
+		defaultInputValue: null,
+		defaultType: 0
 	}
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			searchType: 0,//0:搜索导师，1:全文搜索，2:搜索研究方向
+			searchType: props.defaultType,//0:搜索导师，1:全文搜索，2:搜索研究方向
 
 		}
 		
 		this.search = this.search.bind(this);
 
 		this.searchInput = {};// input搜索框
+
+
 	}
-	
+	componentDidMount() {
+		if(this.props.defaultInputValue !== null) this.searchInput.value = this.props.defaultInputValue;
+	}
+
 	search(value) {
 		console.log("search", this.searchInput.value, this.state.searchType);
-		//TODO: 调用搜索接口
+		//TODO: 网络请求在SearchResultPage实现 在这里只将参数传到SearchResultPage并进行跳转
 	}
 
 	render() {

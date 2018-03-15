@@ -8,9 +8,9 @@ import style from './TeacherBrief.module.css';
 class TeacherBrief extends React.Component {
 	static defaultProps = {
 		additionalInfo: "",
-		brief: null,
 		width: null,
 		basicInfo: {
+			teacherID: "lalala",
 			name: "[教师名]",
 			title: "[职称]",
 			direction: "[研究方向]",
@@ -28,6 +28,7 @@ class TeacherBrief extends React.Component {
 
 	
 	render() {
+		//TODO: 增加Link
 		return (
 			<div 
 				className={style.container}

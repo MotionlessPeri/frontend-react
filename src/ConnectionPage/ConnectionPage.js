@@ -74,25 +74,47 @@ class ConnectionPage extends React.Component {
 		);
 		return (
 			<div className={style.container}>
-				<div className={style.searchContainer}>
-					<QueueAnim
-						type="top"
-						delay={450}
-					>{this.state.isSearchBoxShown?[animate]:null}</QueueAnim>
-					<TweenOne 
-						className={style.hideMark}
-						animation={[{rotate: 180}, {y: "-1.51rem"}]}
-						onClick={(() => {
-							this.setState((prevState, props) => {
-								return {
-									isSearchBoxShown: !prevState.isSearchBoxShown,
-									pause: false
-								};
-							})
-						}).bind(this)}
-						paused={this.state.pause}
-						reverse={this.state.isSearchBoxShown}
-					></TweenOne>
+				<Navigator
+					items={[
+						{
+							text: "学术关系展示",
+							href: "/ConnectionPage",
+							id: ""
+						},
+						{
+							text: "学术资源搜索",
+							href: "/HomePage",
+							id: ""
+						},
+						{
+							text: "目录索引",
+							href: "/SearchByInstitutePage",
+							id: ""
+						}
+					]}
+					defaultChosenIndex={0}
+				></Navigator>
+				<div className={style.bodyContainer}>
+					<div className={style.searchContainer}>
+						<QueueAnim
+							type="top"
+							delay={450}
+						>{this.state.isSearchBoxShown?[animate]:null}</QueueAnim>
+						<TweenOne 
+							className={style.hideMark}
+							animation={[{rotate: 180}, {y: "-1.51rem"}]}
+							onClick={(() => {
+								this.setState((prevState, props) => {
+									return {
+										isSearchBoxShown: !prevState.isSearchBoxShown,
+										pause: false
+									};
+								})
+							}).bind(this)}
+							paused={this.state.pause}
+							reverse={this.state.isSearchBoxShown}
+						></TweenOne>
+					</div>
 				</div>
 				
 				

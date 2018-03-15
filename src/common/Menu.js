@@ -29,6 +29,8 @@ class MiniMenu extends React.Component {
 		};
 
 		this.isMarkerInitial = false;// 记录marker是否初始化
+		this.chosenItem = {};
+		this.marker = {};
 
 		this.textOnClickHanler = this.textOnClickHanler.bind(this);
 	}
@@ -36,12 +38,10 @@ class MiniMenu extends React.Component {
 	
 	componentDidMount() {
 		if(this.isMarkerInitial === false) {
-			let chosenItem = document.getElementsByClassName(miniMenuStyle.item)[this.props.defaultChosenIndex];
-			document.getElementsByClassName(miniMenuStyle.marker)[0].style.top = chosenItem.offsetTop + "px";
-			chosenItem.style.color = "#fc8122";
+			this.marker.dom.style.top = this.chosenItem.offsetTop + "px";
 			this.isMarkerInitial = true;
-			//判断marker是否初始化，如果没初始化，那么将被选中的menu项的offsetTop赋给marker的style.top，让marker与被选中的menu项对齐
 		}
+		//判断marker是否初始化，如果没初始化，那么将被选中的menu项的offsetTop赋给marker的style.top，让marker与被选中的menu项对齐
 	}
 
 	/**
@@ -51,11 +51,8 @@ class MiniMenu extends React.Component {
 	 */
 	textOnClickHanler(e) {
 		let i = parseInt(e.target.getAttribute("index"));
-		if(i === this.state.chosenIndex) return;
-		e.target.style["color"] = "#fc8122";
-		document.getElementsByClassName(miniMenuStyle.text)[this.state.chosenIndex].style["color"] = "black";
 		let animationObject = {top: e.target.offsetParent.offsetTop}; 
-		this.setState({chosenIndex: i, animationObject:animationObject}, this.props.textOnClickCallBack.bind(null, i));
+		this.setState({chosenIndex: i, animationObject:animationObject}, this.props.textOnClickCallBack.bind(null, this.props.items[i]));
 	}
 
 	render() {
@@ -67,6 +64,12 @@ class MiniMenu extends React.Component {
 				<li 
 					key={s} 
 					className={miniMenuStyle.item}
+					style={{color: this.state.chosenIndex === i?"#fc8122":"black"}}
+					ref = {(li => {
+						if(this.state.chosenIndex === i) {
+							this.chosenItem = li;
+						}
+					}).bind(this)}
 				>
 					<div className={miniMenuStyle.text} onClick={this.textOnClickHanler} index={i}>{s}</div>
 				</li>
@@ -79,7 +82,10 @@ class MiniMenu extends React.Component {
 					{liList}
 				</ul>
 				<div className={miniMenuStyle.line}>
-					<TweenOne animation={this.state.animationObject} className={miniMenuStyle.marker}></TweenOne>
+					<TweenOne 
+						ref={marker => this.marker = marker}
+						animation={this.state.animationObject} 
+						className={miniMenuStyle.marker}></TweenOne>
 				</div>
 			</div>
 		);
@@ -112,7 +118,6 @@ class Menu extends React.Component {
 		this.isMarkerInitial = false;// 记录marker是否初始化
 
 		this.textOnClickHanler = this.textOnClickHanler.bind(this);
-		this.render = this.render.bind(this);
 
 		this.chosenItem = {};
 		this.marker = {};

@@ -1,6 +1,4 @@
 .container{
-	min-height: 9.110rem;
-	background-color: #f2f2f2;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -11,6 +9,20 @@
 	-ms-flex-direction: column;
 	-o-flex-direction: column;
 	flex-direction: column;
+	width: 19.2rem;
+}
+.bodyContainer{
+	background-color: #f2f2f2;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	min-height: 9.110rem;
 }
 .searchContainer{
 	display: -webkit-flex;
